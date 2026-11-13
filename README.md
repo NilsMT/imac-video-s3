@@ -12,7 +12,6 @@ imac-s3-video/
 │   ├── 📁 Music/             # Musiques
 │   └── 📁 SFX/               # Effets sonores
 ├── 📁 Grade/                 # Fichiers de color grading
-├── 📁 Export/                # Exports vidéo (Google Drive uniquement)
 ├── 📁 Mix/                   # Exports audio, stems et bounces
 ├── 📁 Misc/                  # Fichiers divers
 └── 📁 Project/
@@ -67,10 +66,11 @@ imac-s3-video/
 **# Exports vidéo**
 
 1. Les exports vidéo doivent être enregistrés dans le dossier `Export/` partagé sur [Google Drive](https://drive.google.com/drive/folders/1njuZEBDRhfxJs2WCZeiwxKQXddGoltWw?usp=drive_link).
-2. Ne pas ajouter les exports vidéo au dépôt GitHub : le dossier `Export/` est ignoré par Git afin d'éviter les problèmes de taille de fichiers.
-3. Prévenir le groupe lorsqu'un nouvel export est disponible.
+2. Prévenir le groupe lorsqu'un nouvel export est disponible.
 
-**# Notes**
+**# Avertissements**
+
+> ⚠️ SUIVRE LA STRUCTURE ÉNONCÉ AU DÉBUT
 
 > ⚠️ NE RIEN CHANGER dans `Rush/` ou `Assets/Stills/` (si possible). En cas de modification, prévenir le groupe et mettre les fichiers à jour sur Google Drive.
 
@@ -78,4 +78,4 @@ imac-s3-video/
 
 > ⚠️ Les LUTs copiées dans le dossier de DaVinci Resolve doivent rester synchronisées avec celles du dépôt GitHub.
 
-> ⚠️ Le dossier `Export/` est stocké sur [Google Drive](https://drive.google.com/drive/folders/1njuZEBDRhfxJs2WCZeiwxKQXddGoltWw?usp=drive_link) et ne doit pas être versionné sur GitHub.
+> ⚠️ Le dossier `Export/` est stocké sur [Google Drive](https://drive.google.com/drive/folders/1njuZEBDRhfxJs2WCZeiwxKQXddGoltWw?usp=drive_link).
