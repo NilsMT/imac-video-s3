@@ -37,9 +37,10 @@ imac-s3-video/
 
 1. Récupérer la dernière version du dépôt GitHub (`git pull`).
 2. Vérifier que personne d'autre ne travaille actuellement sur le projet.
-3. Importer la dernière version du projet (dans [`Project/DRP/`](Project/DRP/)).
-4. Ouvrir le projet importé.
-5. Dans la fenêtre `Media`, cliquer sur l'icône de chaîne rouge et sélectionner le dépôt Git ([`imac-s3-video/`](.)).
+3. Si il y a eu des nouvelles polices dans [`Assets/Fonts/`](Assets/Fonts/), les installer.
+4. Importer la dernière version du projet (dans [`Project/DRP/`](Project/DRP/)).
+5. Ouvrir le projet importé.
+6. Dans la fenêtre `Media`, cliquer sur l'icône de chaîne rouge et sélectionner le dépôt Git ([`imac-s3-video/`](.)).
 
 # **Lors de mon travail**
 
@@ -68,7 +69,7 @@ imac-s3-video/
 1. Les exports vidéo doivent être enregistrés dans le dossier [`Export/`](https://drive.google.com/drive/folders/1njuZEBDRhfxJs2WCZeiwxKQXddGoltWw?usp=drive_link) partagé sur Google Drive.
 2. Prévenir le groupe lorsqu'un nouvel export est disponible.
 
-# **Avertissements**
+# **Notes**
 
 > ⚠️ SUIVRE LA STRUCTURE ÉNONCÉE AU DÉBUT.
 
