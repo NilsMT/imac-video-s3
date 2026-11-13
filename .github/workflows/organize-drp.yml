@@ -1,0 +1,83 @@
+name: Organize DRP exports
+
+on:
+  push:
+    paths:
+      - "Project/INCOMING/**"
+
+permissions:
+  contents: write
+
+# Évite que deux exécutions de cette action se chevauchent.
+concurrency:
+  group: organize-drp-exports
+  cancel-in-progress: false
+
+jobs:
+  organize:
+    # Ne traite pas les commits créés par cette action.
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Déplacer et renommer les exports DRP
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+        run: |
+          python3 <<'PY'
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          import os
+          import shutil
+
+          incoming = Path("Project/INCOMING")
+          drp_folder = Path("Project/DRP")
+
+          incoming.mkdir(parents=True, exist_ok=True)
+          drp_folder.mkdir(parents=True, exist_ok=True)
+
+          username = os.environ["GITHUB_ACTOR"].lower()
+          timestamp = datetime.now(
+              ZoneInfo("Europe/Paris")
+          ).strftime("%Y-%m-%d_%H-%M-%S")
+
+          files = sorted(
+              path for path in incoming.iterdir()
+              if path.is_file() and path.suffix.lower() == ".drp"
+          )
+
+          for source in files:
+              base_name = f"{timestamp}_{username}"
+              counter = 1
+
+              while True:
+                  suffix = "" if counter == 1 else f"_{counter}"
+                  target = drp_folder / f"{base_name}{suffix}.drp"
+
+                  if not target.exists():
+                      break
+
+                  counter += 1
+
+              shutil.move(str(source), str(target))
+              print(f"Déplacé : {source} -> {target}")
+
+          PY
+
+      - name: Enregistrer les changements dans Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add Project/INCOMING Project/DRP
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Organize DaVinci Resolve project exports"
+            git push
+          fi
