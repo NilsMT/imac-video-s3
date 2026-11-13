@@ -1,4 +1,4 @@
-# Structure du projet
+# **Structure du projet**
 
 Avant de commencer, voici l'organisation des dossiers du dépôt GitHub [`imac-s3-video/`](.) :
 
@@ -19,7 +19,7 @@ imac-s3-video/
     └── 📁 INCOMING/          # Dépôt temporaire des nouveaux fichiers .drp
 ```
 
-**# Lors de la première fois**
+# **Lors de la première fois**
 
 1. Télécharger les Rush depuis [Google Drive](https://drive.google.com/drive/folders/1E_Tsh7CDggLtbUBF0nYP68kJLn8iDB12?usp=drive_link).
 2. Les mettre dans [`Rush/`](Rush/).
@@ -33,7 +33,7 @@ imac-s3-video/
     - Retourner dans DaVinci et cliquer sur `Update Lists`.
 8. Récupérer les fichiers présents dans [`Grade/`](Grade/) et les importer dans DaVinci si nécessaire.
 
-**# Quand j'ouvre DaVinci**
+# **Quand j'ouvre DaVinci**
 
 1. Récupérer la dernière version du dépôt GitHub (`git pull`).
 2. Vérifier que personne d'autre ne travaille actuellement sur le projet.
@@ -41,12 +41,12 @@ imac-s3-video/
 4. Ouvrir le projet importé.
 5. Dans la fenêtre `Media`, cliquer sur l'icône de chaîne rouge et sélectionner le dépôt Git ([`imac-s3-video/`](.)).
 
-**# Lors de mon travail**
+# **Lors de mon travail**
 
 1. Ranger les timelines dans le chutier (= un dossier dans la fenêtre `Media`) prévu à cet effet (`Master/Timelines`).
 2. Si des LUTs ou fichiers de Grade sont nécessaires, vérifier qu'ils sont bien installés/importés dans DaVinci.
 
-**# Quand j'ai fini**
+# **Quand j'ai fini**
 
 1. Faire `File > Export Project`.
 2. Enregistrer le fichier dans [`Project/INCOMING/`](Project/INCOMING/) et le nommer comme je veux.
@@ -63,12 +63,12 @@ imac-s3-video/
 
 4. Attendre que la GitHub Action ait terminé, puis faire `git pull` pour récupérer le fichier `.drp` renommé.
 
-**# Exports vidéo**
+# **Exports vidéo**
 
 1. Les exports vidéo doivent être enregistrés dans le dossier [`Export/`](https://drive.google.com/drive/folders/1njuZEBDRhfxJs2WCZeiwxKQXddGoltWw?usp=drive_link) partagé sur Google Drive.
 2. Prévenir le groupe lorsqu'un nouvel export est disponible.
 
-**# Avertissements**
+# **Avertissements**
 
 > ⚠️ SUIVRE LA STRUCTURE ÉNONCÉE AU DÉBUT.
 
