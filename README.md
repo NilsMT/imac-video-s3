@@ -1,6 +1,6 @@
 # **Structure du projet**
 
-Avant de commencer, voici l'organisation des dossiers du dépôt GitHub [`imac-s3-video/`](.) :
+Avant de commencer, voici l'organisation des dossiers du dépôt GitHub [imac-s3-video/](.) :
 
 ```text
 imac-s3-video/
@@ -22,25 +22,25 @@ imac-s3-video/
 # **Lors de la première fois**
 
 1. Télécharger les Rush depuis [Google Drive](https://drive.google.com/drive/folders/1E_Tsh7CDggLtbUBF0nYP68kJLn8iDB12?usp=drive_link).
-2. Les mettre dans [`Rush/`](Rush/).
+2. Les mettre dans [Rush/](Rush/).
 3. Télécharger les Stills depuis Google Drive (dans [Assets](https://drive.google.com/drive/folders/1Pn-GwUeY5hkUyO9YnrdLaRxhRo_EiZW2?usp=drive_link)).
-4. Les mettre dans [`Assets/Stills/`](Assets/Stills/).
-5. Installer les polices présentes dans [`Assets/Fonts/`](Assets/Fonts/) sur son ordinateur.
+4. Les mettre dans [Assets/Stills/](Assets/Stills/).
+5. Installer les polices présentes dans [Assets/Fonts/](Assets/Fonts/) sur son ordinateur.
 6. Vérifier que DaVinci Resolve est bien en version 21.2.
-7. Récupérer les fichiers présents dans [`Assets/LUTs/`](Assets/LUTs/) et les copier dans le dossier LUT utilisé par DaVinci Resolve :
+7. Récupérer les fichiers présents dans [Assets/LUTs/](Assets/LUTs/) et les copier dans le dossier LUT utilisé par DaVinci Resolve :
     - Dans DaVinci : `Project Settings > Color Management > Lookup Tables > Open LUT Folder`.
     - Copier les fichiers dans ce dossier.
     - Retourner dans DaVinci et cliquer sur `Update Lists`.
-8. Récupérer les fichiers présents dans [`Grade/`](Grade/) et les importer dans DaVinci si nécessaire.
+8. Récupérer les fichiers présents dans [Grade/](Grade/) et les importer dans DaVinci si nécessaire.
 
 # **Quand j'ouvre DaVinci**
 
 1. Récupérer la dernière version du dépôt GitHub (`git pull`).
 2. Vérifier que personne d'autre ne travaille actuellement sur le projet.
-3. Si il y a eu des nouvelles polices dans [`Assets/Fonts/`](Assets/Fonts/), les installer.
-4. Importer la dernière version du projet (dans [`Project/DRP/`](Project/DRP/)).
+3. Si il y a eu des nouvelles polices dans [Assets/Fonts/](Assets/Fonts/), les installer.
+4. Importer la dernière version du projet (dans [Project/DRP/](Project/DRP/)).
 5. Ouvrir le projet importé.
-6. Dans la fenêtre `Media`, cliquer sur l'icône de chaîne rouge et sélectionner le dépôt Git ([`imac-s3-video/`](.)).
+6. Dans la fenêtre `Media`, cliquer sur l'icône de chaîne rouge et sélectionner le dépôt Git ([imac-s3-video/](.)).
 
 # **Lors de mon travail**
 
@@ -50,11 +50,11 @@ imac-s3-video/
 # **Quand j'ai fini**
 
 1. Faire `File > Export Project`.
-2. Enregistrer le fichier dans [`Project/INCOMING/`](Project/INCOMING/) et le nommer comme je veux.
+2. Enregistrer le fichier dans [Project/INCOMING/](Project/INCOMING/) et le nommer comme je veux.
 
-    > Le fichier sera automatiquement renommé et déplacé dans [`Project/DRP/`](Project/DRP/) après le commit et le push.
+    > Le fichier sera automatiquement renommé et déplacé dans [Project/DRP/](Project/DRP/) après le commit et le push.
 
-3. Ouvrir un terminal, se placer dans `imac-s3-video/` et exécuter :
+3. Ouvrir un terminal, se placer dans [imac-s3-video/](./) et exécuter :
 
     ```bash
     git add .
@@ -66,17 +66,22 @@ imac-s3-video/
 
 # **Exports vidéo**
 
-1. Les exports vidéo doivent être enregistrés dans le dossier [`Export/`](https://drive.google.com/drive/folders/1njuZEBDRhfxJs2WCZeiwxKQXddGoltWw?usp=drive_link) partagé sur Google Drive.
+1. Les exports vidéo doivent être enregistrés dans le dossier [Export/](https://drive.google.com/drive/folders/1njuZEBDRhfxJs2WCZeiwxKQXddGoltWw?usp=drive_link) partagé sur Google Drive.
 2. Prévenir le groupe lorsqu'un nouvel export est disponible.
 
 # **Notes**
 
-> ⚠️ SUIVRE LA STRUCTURE ÉNONCÉE AU DÉBUT.
+> ⚠️ AVERTISSEMENTS
+>
+> - SUIVRE LA STRUCTURE ÉNONCÉE AU DÉBUT.
+> - NE RIEN CHANGER dans [Rush/](Rush/) ou [Assets/Stills/](Assets/Stills/) (si possible).<br>En cas de modification, prévenir le groupe et mettre les fichiers à jour sur Google Drive.
+> - Ne pas déplacer ni supprimer les fichiers originaux dans GitHub ([Assets/LUTs/](Assets/LUTs/), [Grade/](Grade/), etc.).<br>Toujours conserver les fichiers à leur emplacement d'origine dans le dépôt.
+> - Les LUTs copiées dans le dossier de DaVinci Resolve doivent rester synchronisées avec celles du dépôt GitHub.
+> - Le dossier [Export/](https://drive.google.com/drive/folders/1njuZEBDRhfxJs2WCZeiwxKQXddGoltWw?usp=drive_link) est stocké sur Google Drive.
 
-> ⚠️ NE RIEN CHANGER dans [`Rush/`](Rush/) ou [`Assets/Stills/`](Assets/Stills/) (si possible). En cas de modification, prévenir le groupe et mettre les fichiers à jour sur Google Drive.
-
-> ⚠️ Ne pas déplacer ni supprimer les fichiers originaux dans GitHub ([`Assets/LUTs/`](Assets/LUTs/), [`Grade/`](Grade/), etc.). Toujours conserver les fichiers à leur emplacement d'origine dans le dépôt.
-
-> ⚠️ Les LUTs copiées dans le dossier de DaVinci Resolve doivent rester synchronisées avec celles du dépôt GitHub.
-
-> ⚠️ Le dossier [`Export/`](https://drive.google.com/drive/folders/1njuZEBDRhfxJs2WCZeiwxKQXddGoltWw?usp=drive_link) est stocké sur Google Drive.
+> ℹ️ INFOS
+>
+> En téléchargeant [Rush](https://drive.google.com/drive/folders/1cW8X1DpMgrUhxFnN4YmtnY5FeixkWK4-?usp=drive_link) il y a deux fichiers textes :<br>
+>
+> - [unsynced_list.txt](Rush/unsynced_list.txt) pour lister ce que DaVinci n'a pas pu synchroniser (entre `.MP4` et `.WAV`)
+> - [audit_report.txt](Rush/audit_report.txt) pour lister les "anomalies" du derush (genre un `.MP4` mais sans son `.WAV`)
